@@ -1,0 +1,43 @@
+2024-09-11 01:19:39,651 INFO: function call: combined_clean_ppd started
+2024-09-11 01:19:39,689 INFO: function call: combined_clean_ppd ran successfully
+2024-09-11 01:19:39,689 INFO: function call: adjust_percentiles started
+2024-09-11 01:19:39,690 INFO: Percentiles adjusted successfully
+2024-09-11 01:19:39,690 INFO: function call: sort_by_salary_descending started
+2024-09-11 01:19:39,690 INFO: Data successfully sorted by dk$ in descending order
+2024-09-11 01:19:39,690 INFO: function call: adjust_roster_percentage started
+2024-09-11 01:19:39,691 INFO: Roster% successfully adjusted to be between 0 and 1
+2024-09-11 01:19:39,691 INFO: function call: round_columns started
+2024-09-11 01:19:39,695 INFO: Columns successfully rounded
+2024-09-11 01:19:39,695 INFO: Deleted existing file: ../out/BUF_MIA.csv
+2024-09-11 01:19:39,697 INFO: Processed file saved to ../out/BUF_MIA.csv
+2024-09-11 01:20:19,960 INFO: function call: combined_clean_ppd started
+2024-09-11 01:20:19,997 INFO: function call: combined_clean_ppd ran successfully
+2024-09-11 01:20:19,997 INFO: function call: adjust_percentiles started
+2024-09-11 01:20:19,998 INFO: Percentiles adjusted successfully
+2024-09-11 01:20:19,998 INFO: function call: sort_by_salary_descending started
+2024-09-11 01:20:19,998 INFO: Data successfully sorted by dk$ in descending order
+2024-09-11 01:20:19,998 INFO: function call: adjust_roster_percentage started
+2024-09-11 01:20:19,999 INFO: Roster% successfully adjusted to be between 0 and 1
+2024-09-11 01:20:19,999 INFO: function call: round_columns started
+2024-09-11 01:20:20,002 INFO: Columns successfully rounded
+2024-09-11 01:20:20,005 INFO: Processed file saved to ../out/BUF_MIA.csv
+2024-09-12 18:33:28,338 INFO: function call: combined_clean_ppd started
+2024-09-12 18:33:28,378 INFO: function call: combined_clean_ppd ran successfully
+2024-09-12 18:33:28,378 INFO: function call: adjust_percentiles started
+2024-09-12 18:33:28,379 INFO: Percentiles adjusted successfully
+2024-09-12 18:33:28,379 INFO: function call: sort_by_salary_descending started
+2024-09-12 18:33:28,379 INFO: Data successfully sorted by dk$ in descending order
+2024-09-12 18:33:28,379 INFO: function call: adjust_roster_percentage started
+2024-09-12 18:33:28,380 INFO: Roster% successfully adjusted to be between 0 and 1
+2024-09-12 18:33:28,380 INFO: function call: round_columns started
+2024-09-12 18:33:28,383 INFO: Columns successfully rounded
+2024-09-12 18:34:36,750 INFO: function call: combined_clean_ppd started
+2024-09-12 18:34:36,785 INFO: function call: combined_clean_ppd ran successfully
+2024-09-12 18:34:36,785 INFO: function call: adjust_percentiles started
+2024-09-12 18:34:36,786 INFO: Percentiles adjusted successfully
+2024-09-12 18:34:36,786 INFO: function call: sort_by_salary_descending started
+2024-09-12 18:34:36,786 INFO: Data successfully sorted by dk$ in descending order
+2024-09-12 18:34:36,786 INFO: function call: adjust_roster_percentage started
+2024-09-12 18:34:36,787 INFO: Roster% successfully adjusted to be between 0 and 1
+2024-09-12 18:34:36,787 INFO: function call: round_columns started
+2024-09-12 18:34:36,791 INFO: Columns successfully rounded

@@ -1,0 +1,105 @@
+# ui/lineup_display.py
+
+import streamlit as st
+import pandas as pd
+from settings import COLUMN_CONFIG
+
+
+def display_lineups(lineups, exposure_df, df_showdown):
+    st.header("Optimized Lineups")
+
+    # Calculate number of rows needed
+    num_lineups = len(lineups)
+    lineups_per_row = 3
+    num_rows = (num_lineups + lineups_per_row - 1) // lineups_per_row
+
+    lineup_idx = 0
+    for row in range(num_rows):
+        cols = st.columns(lineups_per_row)
+        for col_idx in range(lineups_per_row):
+            if lineup_idx >= num_lineups:
+                break
+            lineup = lineups[lineup_idx]
+            with cols[col_idx]:
+                st.subheader(f"Lineup #{lineup_idx + 1}")
+                lineup_details = []
+                lineup_salary = 0
+                lineup_projection = 0
+
+                # Extract player details and sort captain first
+                for player_id in lineup:
+                    try:
+                        name, role = player_id.rsplit('|', 1)
+                        player_info = df_showdown[
+                            (df_showdown[COLUMN_CONFIG['name']] == name) &
+                            (df_showdown['role'] == role)
+                        ]
+                        if player_info.empty:
+                            st.error(f"Player data not found for: {player_id}")
+                            continue
+                        player_info = player_info.iloc[0]
+
+                        player_entry = {
+                            'Player': f"{name} ({role})",
+                            'Salary': player_info[COLUMN_CONFIG['salary']],
+                            'Projection': player_info[COLUMN_CONFIG['adjusted_projection']]
+                        }
+                        lineup_details.append(player_entry)
+
+                        lineup_salary += player_info[COLUMN_CONFIG['salary']]
+                        lineup_projection += player_info[COLUMN_CONFIG['adjusted_projection']]
+                    except Exception as e:
+                        st.error(f"Error retrieving data for player {player_id}: {e}")
+                        continue
+
+                # Sort lineup details to have captain first
+                lineup_details.sort(key=lambda x: 0 if '(Captain)' in x['Player'] else 1)
+
+                # Convert to DataFrame for display
+                lineup_df = pd.DataFrame(lineup_details)
+
+                # Format salary and projection for better readability
+                lineup_df['Salary'] = lineup_df['Salary'].apply(lambda x: f"${x:,.0f}")
+                lineup_df['Projection'] = lineup_df['Projection'].apply(lambda x: f"{x:.2f}")
+
+                # Display lineup table
+                st.table(lineup_df[['Player', 'Salary', 'Projection']])
+
+                # Display lineup summary
+                st.write(f"**Total Salary:** ${lineup_salary:,.0f}")
+                st.write(f"**Total Projection:** {lineup_projection:.2f}")
+            lineup_idx += 1
+
+    # Display Player Exposure
+    st.header("Player Exposure After Selection")
+    # Format exposure_df for better readability
+    exposure_df_display = exposure_df[['Player', 'Role', 'Salary', 'Projection', 'Current Exposure (%)']]
+    exposure_df_display['Salary'] = exposure_df_display['Salary'].apply(lambda x: f"${x:,.0f}")
+    exposure_df_display['Projection'] = exposure_df_display['Projection'].apply(lambda x: f"{x:.2f}")
+    st.dataframe(exposure_df_display)
+
+
+def display_exposure(exposure_df):
+    st.header("Player Exposure in Pool")
+
+    # Create columns for inputs
+    exposure_df['Target Exposure (%)'] = exposure_df.apply(
+        lambda row: st.number_input(
+            f"Set target exposure for {row['Player']} ({row['Role']})",
+            min_value=0.0,
+            max_value=100.0,
+            value=row['Current Exposure (%)'],
+            step=1.0,
+            key=f"{row['Player']}_{row['Role']}_exposure"
+        ),
+        axis=1
+    )
+
+    # Display the exposure DataFrame
+    exposure_df_display = exposure_df[['Player', 'Role', 'Salary', 'Projection', 'Current Exposure (%)', 'Target Exposure (%)']]
+    exposure_df_display['Salary'] = exposure_df_display['Salary'].apply(lambda x: f"${x:,.0f}")
+    exposure_df_display['Projection'] = exposure_df_display['Projection'].apply(lambda x: f"{x:.2f}")
+    st.dataframe(exposure_df_display)
+
+    return exposure_df
+

@@ -1,0 +1,58 @@
+2024-09-12 18:37:55,246 INFO: Processing file: /home/ds/nfl/data/code/../csvs/input/NFL_2024-09-12-815pm_DK_SHOWDOWN_BUF-@-MIA.csv
+2024-09-12 18:37:55,246 INFO: function call: combined_clean_ppd started
+2024-09-12 18:37:55,281 INFO: function call: combined_clean_ppd ran successfully
+2024-09-12 18:37:55,281 INFO: function call: adjust_percentiles started
+2024-09-12 18:37:55,282 INFO: Percentiles adjusted successfully
+2024-09-12 18:37:55,282 INFO: function call: sort_by_salary_descending started
+2024-09-12 18:37:55,283 INFO: Data successfully sorted by dk$ in descending order
+2024-09-12 18:37:55,283 INFO: function call: adjust_roster_percentage started
+2024-09-12 18:37:55,283 INFO: Roster% successfully adjusted to be between 0 and 1
+2024-09-12 18:37:55,283 INFO: function call: round_columns started
+2024-09-12 18:37:55,287 INFO: Columns successfully rounded
+2024-09-12 18:37:55,287 INFO: Deleted existing file: /home/ds/nfl/data/code/../out/BUF_MIA.csv
+2024-09-12 18:37:55,289 INFO: Processed file saved to /home/ds/nfl/data/code/../out/BUF_MIA.csv
+2024-09-12 18:39:42,252 INFO: Processing file: /home/ds/nfl/data/code/../csvs/input/NFL_2024-09-12-815pm_DK_SHOWDOWN_BUF-@-MIA.csv
+2024-09-12 18:39:42,253 INFO: function call: combined_clean_ppd started
+2024-09-12 18:39:42,287 INFO: function call: combined_clean_ppd ran successfully
+2024-09-12 18:39:42,287 INFO: function call: adjust_percentiles started
+2024-09-12 18:39:42,288 INFO: Percentiles adjusted successfully
+2024-09-12 18:39:42,288 INFO: function call: sort_by_salary_descending started
+2024-09-12 18:39:42,289 INFO: Data successfully sorted by dk$ in descending order
+2024-09-12 18:39:42,289 INFO: function call: adjust_roster_percentage started
+2024-09-12 18:39:42,289 INFO: Roster% successfully adjusted to be between 0 and 1
+2024-09-12 18:39:42,289 INFO: function call: round_columns started
+2024-09-12 18:39:42,293 INFO: Columns successfully rounded
+2024-09-12 18:39:42,293 INFO: Deleted existing file: /home/ds/nfl/data/code/../out/BUF_MIA.csv
+2024-09-12 18:39:42,295 INFO: Processed file saved to /home/ds/nfl/data/code/../out/BUF_MIA.csv
+2024-09-15 13:34:49,584 INFO: Processing file: /home/ds/nfl/projections/code/../csvs/input/NFL_2024-09-15-820pm_DK_SHOWDOWN_CHI-@-HOU.csv
+2024-09-15 13:34:49,584 INFO: function call: combined_clean_ppd started
+2024-09-15 13:34:49,635 INFO: function call: combined_clean_ppd ran successfully
+2024-09-15 13:34:49,635 INFO: function call: adjust_percentiles started
+2024-09-15 13:34:49,636 INFO: Percentiles adjusted successfully
+2024-09-15 13:34:49,636 INFO: function call: sort_by_salary_descending started
+2024-09-15 13:34:49,637 INFO: Data successfully sorted by dk$ in descending order
+2024-09-15 13:34:49,637 INFO: function call: adjust_roster_percentage started
+2024-09-15 13:34:49,637 INFO: Roster% successfully adjusted to be between 0 and 1
+2024-09-15 13:34:49,637 INFO: function call: round_columns started
+2024-09-15 13:34:49,641 INFO: Columns successfully rounded
+2024-09-15 13:34:49,643 INFO: Processed file saved to /home/ds/nfl/projections/code/../out/CHI_HOU.csv
+2024-09-20 21:43:29,441 INFO: Processing file: /home/ds/nfl/projections/code/../csvs/input/NFL_2024-09-15-820pm_DK_SHOWDOWN_CHI-@-HOU.csv
+2024-09-20 21:43:29,441 INFO: function call: combined_clean_ppd started
+2024-09-20 21:43:29,507 INFO: function call: combined_clean_ppd ran successfully
+2024-09-20 21:43:29,507 INFO: function call: adjust_percentiles started
+2024-09-20 21:43:29,508 INFO: Percentiles adjusted successfully
+2024-09-20 21:43:29,509 INFO: function call: sort_by_salary_descending started
+2024-09-20 21:43:29,509 INFO: Data successfully sorted by dk$ in descending order
+2024-09-20 21:43:29,509 INFO: function call: adjust_roster_percentage started
+2024-09-20 21:43:29,510 INFO: Roster% successfully adjusted to be between 0 and 1
+2024-09-20 21:43:29,510 INFO: function call: round_columns started
+2024-09-20 21:43:29,516 INFO: Columns successfully rounded
+2024-09-20 21:43:29,519 INFO: Processed file saved to /home/ds/nfl/projections/code/../out/CHI_HOU.csv
+2024-09-20 21:51:18,828 INFO: Processing file: /home/ds/nfl/projections/code/../csvs/input/NFL_2024-09-15-820pm_DK_SHOWDOWN_CHI-@-HOU.csv
+2024-09-20 21:51:18,828 INFO: function call: combined_clean_ppd started
+2024-09-20 21:51:18,871 ERROR: function call: combined_clean_ppd failed due to error - 'adj_proj'
+2024-09-20 21:51:18,871 ERROR: Failed to process file NFL_2024-09-15-820pm_DK_SHOWDOWN_CHI-@-HOU.csv: 'adj_proj'
+2024-09-21 16:28:30,716 INFO: Processing file: /home/ds/nfl/projections/code/../csvs/input/NFL_2024-09-22-820pm_DK_SHOWDOWN_KC-@-ATL.csv
+2024-09-21 16:28:30,717 INFO: function call: combined_clean_ppd started
+2024-09-21 16:28:30,766 ERROR: function call: combined_clean_ppd failed due to error - 'adj_proj'
+2024-09-21 16:28:30,766 ERROR: Failed to process file NFL_2024-09-22-820pm_DK_SHOWDOWN_KC-@-ATL.csv: 'adj_proj'
